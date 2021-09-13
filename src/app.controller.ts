@@ -18,7 +18,18 @@ export class AppController {
   @UseGuards(JwtAuthGuard)
   @Get('tags')
   getProfile(@Request() req) {
-    const domains = ["EQUITY","TRADE","CONSOLE"];
+    const domains = [
+      {
+      "key" : "1",
+      "value" : "EQUITY"
+    }, {
+      "key" : "2",
+      "value" : "TRADE"
+    }, {
+      "key" : "3",
+      "value" : "CONSOLE"
+    }
+    ];
     return domains;
   }
 

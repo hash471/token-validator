@@ -25,7 +25,18 @@ let AppController = class AppController {
         return this.authService.login(req.user);
     }
     getProfile(req) {
-        const domains = ["EQUITY", "TRADE", "CONSOLE"];
+        const domains = [
+            {
+                "key": "1",
+                "value": "EQUITY"
+            }, {
+                "key": "2",
+                "value": "TRADE"
+            }, {
+                "key": "3",
+                "value": "CONSOLE"
+            }
+        ];
         return domains;
     }
 };
